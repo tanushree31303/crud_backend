@@ -32,7 +32,10 @@ public class AppController {
 	public String update(@RequestBody Product p) {
 		return s.updateData(p);
 	}
-
+    @GetMapping("/")
+    public String home() {
+        return "Backend is running! Use /display, /insert, /update";
+    }
 	/* 
 	@DeleteMapping("/delete/{id}")
 	public String delete(@PathVariable int id) {
